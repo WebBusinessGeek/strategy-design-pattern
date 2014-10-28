@@ -6,6 +6,10 @@ use Illuminate\Routing\Controller;
 
 use App\Http;
 
+use App\Http\SlowFlyBehavior;
+
+
+
 class HomeController extends Controller {
 
 	/*
@@ -25,7 +29,7 @@ class HomeController extends Controller {
 	public function index()
 	{
 		$greenDuck = new GreenDuck();
-		var_dump($greenDuck->performFly(\SlowFlyBehavior));
+		return $greenDuck->performQuack(new Http\LoudQuackBehavior());
 	}
 
 	/**

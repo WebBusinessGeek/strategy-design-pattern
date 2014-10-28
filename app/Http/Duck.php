@@ -16,9 +16,9 @@ abstract class Duck {
         return 'I am swimming';
     }
 
-    abstract public function performFly(SlowFlyBehavior $flyBehavior);
+    abstract public function performFly(FlyBehaviorContract $flyBehavior);
 
-    abstract public function performQuack(LoudQuackBehavior $loudQuackBehavior);
+    abstract public function performQuack(QuackBehaviorContract $quackBehavior);
 
 
 }

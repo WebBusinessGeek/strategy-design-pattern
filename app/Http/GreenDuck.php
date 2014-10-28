@@ -11,12 +11,12 @@ namespace App\Http;
 
 class GreenDuck extends Duck {
 
-    public function performFly(SlowFlyBehavior $flyBehavior)
+    public function performFly(FlyBehaviorContract $flyBehavior)
     {
         $flyBehavior->fly();
     }
 
-    public function performQuack(LoudQuackBehavior $quackBehavior)
+    public function performQuack(QuackBehaviorContract $quackBehavior)
     {
         $quackBehavior->quack();
     }

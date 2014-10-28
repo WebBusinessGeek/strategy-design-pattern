@@ -11,12 +11,12 @@ namespace App\Http;
 
 class BlueDuck extends Duck {
 
-    public function performFly(FastFlyBehavior  $flyBehavior)
+    public function performFly(FlyBehaviorContract $flyBehavior)
     {
         $flyBehavior->fly();
     }
 
-    public function performQuack(QuietQuackBehavior $quackBehavior)
+    public function performQuack(QuackBehaviorContract $quackBehavior)
     {
         $quackBehavior->quack();
     }
