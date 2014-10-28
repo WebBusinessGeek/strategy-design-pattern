@@ -1,6 +1,10 @@
 <?php namespace App\Http\Controllers;
 
+use App\Http\BlueDuck;
+use App\Http\GreenDuck;
 use Illuminate\Routing\Controller;
+
+use App\Http;
 
 class HomeController extends Controller {
 
@@ -20,7 +24,17 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('hello');
+		$greenDuck = new GreenDuck();
+		var_dump($greenDuck->performFly(\SlowFlyBehavior));
+	}
+
+	/**
+	 * @Get("/green")
+	 */
+	public function greenDuck()
+	{
+		$greenDuck = new GreenDuck();
+		var_dump($greenDuck);
 	}
 
 }
