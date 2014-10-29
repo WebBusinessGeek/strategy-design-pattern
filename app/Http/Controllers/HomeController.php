@@ -33,7 +33,7 @@ class HomeController extends Controller {
 	{
 
 		$greenDuck = new GreenDuck();
-		return $greenDuck->performFly(new SlowFlyBehavior()).' and '. $greenDuck->performQuack(new LoudQuackBehavior());
+		return $greenDuck->performFly(new FastFlyBehavior()).' and '. $greenDuck->performQuack(new LoudQuackBehavior());
 
 
 	}

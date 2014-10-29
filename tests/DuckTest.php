@@ -13,10 +13,21 @@ class DuckTest extends PHPUnit_Framework_TestCase {
     public function testSwim()
     {
 
-        $duck = $this->getMockForAbstractClass('App\Http\Duck');
+        $duck = new Duck();
 
         $this->assertEquals('I am swimming', $duck->swim());
 
     }
+
+    public function testPerformFly()
+    {
+
+    }
+
+    public function testPerformQuack()
+    {
+        
+    }
+
 
 }

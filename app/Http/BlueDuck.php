@@ -11,15 +11,7 @@ namespace App\Http;
 
 class BlueDuck extends Duck {
 
-    public function performFly(FlyBehaviorContract $flyBehavior)
-    {
-       return  $flyBehavior->fly();
-    }
 
-    public function performQuack(QuackBehaviorContract $quackBehavior)
-    {
-        return $quackBehavior->quack();
-    }
 
 
 }

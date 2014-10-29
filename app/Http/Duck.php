@@ -9,16 +9,22 @@
 namespace App\Http;
 
 
-abstract class Duck {
+class Duck {
 
     public function swim()
     {
         return 'I am swimming';
     }
 
-    abstract public function performFly(FlyBehaviorContract $flyBehavior);
+    public function performFly(FlyBehaviorContract $flyBehavior)
+    {
+        return $flyBehavior->fly();
+    }
 
-    abstract public function performQuack(QuackBehaviorContract $quackBehavior);
+    public function performQuack(QuackBehaviorContract $quackBehavior)
+    {
+        return $quackBehavior->quack();
+    }
 
 
 }
