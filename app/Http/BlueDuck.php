@@ -13,12 +13,12 @@ class BlueDuck extends Duck {
 
     public function performFly(FlyBehaviorContract $flyBehavior)
     {
-        $flyBehavior->fly();
+       return  $flyBehavior->fly();
     }
 
     public function performQuack(QuackBehaviorContract $quackBehavior)
     {
-        $quackBehavior->quack();
+        return $quackBehavior->quack();
     }
 
 

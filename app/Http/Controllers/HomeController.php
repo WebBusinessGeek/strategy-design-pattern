@@ -3,10 +3,13 @@
 use App\Http\BlueDuck;
 use App\Http\GreenDuck;
 use Illuminate\Routing\Controller;
-
+use App\Http\SlowFlyBehavior;
+use App\Http\LoudQuackBehavior;
+use App\Http\FastFlyBehavior;
+use App\Http\QuietQuackBehavior;
 use App\Http;
 
-use App\Http\SlowFlyBehavior;
+
 
 
 
@@ -28,17 +31,12 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
+
 		$greenDuck = new GreenDuck();
-		return $greenDuck->performQuack(new Http\LoudQuackBehavior());
+		return $greenDuck->performFly(new SlowFlyBehavior()).' and '. $greenDuck->performQuack(new LoudQuackBehavior());
+
+
 	}
 
-	/**
-	 * @Get("/green")
-	 */
-	public function greenDuck()
-	{
-		$greenDuck = new GreenDuck();
-		var_dump($greenDuck);
-	}
 
 }
